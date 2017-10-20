@@ -1,0 +1,52 @@
+#include <iostream>
+#include <conio.h>
+#include <Windows.h>
+
+using namespace std;
+
+int addition (int x, int y);
+int minus (int x,int y);
+int multiply (int x,int y);
+int division (int x,int y);
+
+
+
+int main ()
+{
+	int i,x,y;
+	cout<<"1.Addition"<<endl<<"2.Minus"<<endl<<"3.Multiply"<<endl<<"4.Division"<<endl;
+	cin>>i;
+	system("cls");
+	cout<<"Enter Numbers:"<<endl;
+	cin>>x;
+	cin>>y;
+	system("cls");
+	if (i==1)	cout<<addition(x,y);
+	else if (i==2)	cout<<minus(x,y);
+	else if (i==3)	cout<<multiply(x,y);
+	else if (i==4)
+	{
+		if (y==0)	cout<<"error";
+		else cout<<division(x,y);
+	}
+
+	_getch();
+	return 0;
+}
+
+int addition (int x, int y)
+{
+	return x+y;
+}
+int minus (int x,int y)
+{
+	return x-y;
+}
+int multiply (int x,int y)
+{
+	return x*y;
+}
+int division (int x,int y)
+{
+	return x/y;
+}
